@@ -11,7 +11,7 @@ public class Student {
     @Id // tick this field is primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY) // use auto-increment in DB
     @Column(name ="id") // id is name of this field in DB
-    private String id;
+    private int id;
 
     @Column(name="first_name")
     private String first_name;
@@ -33,11 +33,11 @@ public class Student {
 
 
     //(3) define getter/setter
-    public void setId(String id){
+    public void setId(int id){
         this.id = id;
     }
 
-    public String getId(){
+    public int getId(){
         return id;
     }
 

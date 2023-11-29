@@ -20,11 +20,11 @@ public class SpringBootJpaHibernateApplication {
 	@Bean // đánh dấu được thêm vào context và tự động được gọi khi main được khởi động
 	public CommandLineRunner commandLineRunner(studentDAO studentDAO){
 		return runner -> {
-//			createStudent(studentDAO);
+			createStudent(studentDAO);
 //			findAll(studentDAO);
 //			findByLastName(studentDAO);
 //			updateStudent(studentDAO);
-			deleteStudent(studentDAO);
+//			deleteStudent(studentDAO);
 		};
 	}
 
@@ -83,9 +83,9 @@ public class SpringBootJpaHibernateApplication {
 	}
 
 	public void deleteStudent(studentDAO studentDAO){
-		int studentId = 2;
-		System.out.println("Getting student with id = 2 : "+studentId);
-		Student student = studentDAO.findById(2);
+		int studentId = 3;
+		System.out.println("Getting student with id =  : "+studentId);
+		Student student = studentDAO.findById(studentId);
 
 		//Delete student :
 		System.out.print("Deleting student : ....");
